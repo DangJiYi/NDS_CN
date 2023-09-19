@@ -1,0 +1,2261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nitro Studio 2</name>
+    </assembly>
+    <members>
+        <member name="F:NitroStudio2.AboutWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.AboutWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.AboutWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.BankEditor">
+            <summary>
+            Bank editor.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.BankEditor.BK">
+            <summary>
+            The bank file.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankEditor.Mixer">
+            <summary>
+            Mixer.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankEditor.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankEditor.Random">
+            <summary>
+            Random.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.#ctor(NitroStudio2.MainWindow)">
+            <summary>
+            Create a new bank editor.
+            </summary>
+            <param name="mainWindow">Main window.</param>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.#ctor(System.String)">
+            <summary>
+            Create a new bank editor.
+            </summary>
+            <param name="fileToOpen">The file to open.</param>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.#ctor(GotaSoundIO.IO.IOFile,NitroStudio2.MainWindow,System.String)">
+            <summary>
+            Create a new bank editor.
+            </summary>
+            <param name="fileToOpen">The file to open.</param>
+            <param name="mainWindow">The main window.</param>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.Init">
+            <summary>
+            Initialize the editor.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.DoInfoStuff">
+            <summary>
+            Do info stuff.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.UpdateNodes">
+            <summary>
+            Update nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.PopulateRegionGrid">
+            <summary>
+            Populate the region grid.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.LoadWaveArchives">
+            <summary>
+            Load wave archives.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.OnPianoPress">
+            <summary>
+            On the piano press.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.OnPianoRelease">
+            <summary>
+            On the piano release.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.RegionsChanged(System.Object,System.EventArgs)">
+            <summary>
+            Regions changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.TypeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Instrument type changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Key press.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.RootAdd">
+            <summary>
+            Root add.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.NodeAddAbove">
+            <summary>
+            Add above.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.NodeAddBelow">
+            <summary>
+            Add below.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.NodeReplace">
+            <summary>
+            Replace the instrument.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.NodeExport">
+            <summary>
+            Export.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.NodeDelete">
+            <summary>
+            Delete the node.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.SwapIndexButton(System.Object,System.EventArgs)">
+            <summary>
+            Swap index button.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.InsertAtIndexButton(System.Object,System.EventArgs)">
+            <summary>
+            Insert index button.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.PlayRegionButtonClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Play region button.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.ColorNotes(System.Byte,System.Collections.Generic.List{NitroFileLoader.NoteInfo})">
+            <summary>
+            Color notes.
+            </summary>
+            <param name="n">The note info.</param>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war0BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war1BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war2BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war3BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war0ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war1ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war2ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.war3ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankEditor.EditorClosing(System.Object,System.EventArgs)">
+            <summary>
+            Closing.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.BankGenerator">
+            <summary>
+            Bank generator.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.BankGenerator.SA">
+            <summary>
+            Sound archive.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.MainWindow">
+            <summary>
+            Main window.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.WritingInfo">
+            <summary>
+            Writing info.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.Mixer">
+            <summary>
+            Mixer.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.#ctor(NitroStudio2.MainWindow)">
+            <summary>
+            New bank generator.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.PopulateBankBox(NitroFileLoader.SoundArchive,System.Windows.Forms.DataGridViewComboBoxColumn)">
+            <summary>
+            Populate a combo box with banks.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.PopulateInstrumentBox(NitroFileLoader.Bank,System.Windows.Forms.DataGridViewComboBoxCell,System.Boolean)">
+            <summary>
+            Populate an instrument box.
+            </summary>
+            <param name="b">The bank.</param>
+            <param name="c">The combo box.</param>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.InstrumentsChanged(System.Object,System.EventArgs)">
+            <summary>
+            Instruments changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.CreateBnk_Click(System.Object,System.EventArgs)">
+            <summary>
+            Create bank.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.PlayRegionButtonClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Play region button.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.OnClosing(System.Object,System.EventArgs)">
+            <summary>
+            On closing.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.BankGenerator.InstrumentInfo">
+            <summary>
+            Instrument info.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.InstrumentInfo.Bank">
+            <summary>
+            Bank info.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.InstrumentInfo.Inst">
+            <summary>
+            Instrument.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.InstrumentInfo.NewId">
+            <summary>
+            New instrument Id.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.InstrumentInfo.UseExistingWar">
+            <summary>
+            Use existing war.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.BankGenerator.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.BankGenerator.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.InstrumentSelector.SelectedInstruments">
+            <summary>
+            Selected instruments.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.InstrumentSelector.wavs">
+            <summary>
+            Waves.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.InstrumentSelector.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.InstrumentSelector.Mixer">
+            <summary>
+            Mixer.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.InstrumentSelector.#ctor(System.Collections.Generic.List{GotaSoundIO.Sound.RiffWave},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.String})">
+            <summary>
+            Bank importer.
+            </summary>
+            <param name="waves">Waves.</param>
+            <param name="insts">Ids.</param>
+            <param name="insts">Names.</param>
+        </member>
+        <member name="M:NitroStudio2.InstrumentSelector.finishedButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Finished.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.InstrumentSelector.PlayRegionButtonClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Play region button.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.InstrumentSelector.OnClosing(System.Object,System.EventArgs)">
+            <summary>
+            On closing.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.InstrumentSelector.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.InstrumentSelector.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.InstrumentSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Bank">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Bnk">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Close">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Export">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Help">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Ico">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Idle">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Import">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Mute">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.New">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.NoteDown">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.NSM">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Open">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Quit">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Rename">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Save">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Save_As">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Seq">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.War">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.Properties.Resources.Wav">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SequenceRecorder.Mixer">
+            <summary>
+            Mixer.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SequenceRecorder.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SequenceRecorder.commands">
+            <summary>
+            Commands.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SequenceRecorder.seqStart">
+            <summary>
+            Sequence start.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SequenceRecorder.filePath">
+            <summary>
+            File path.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceRecorder.#ctor(GotaSequenceLib.Playback.PlayableBank[],GotaSoundIO.Sound.RiffWave[][],System.Collections.Generic.List{GotaSequenceLib.SequenceCommand},System.Int32,System.String)">
+            <summary>
+            Create a new sequence recorder.
+            </summary>
+            <param name="banks">The banks.</param>
+            <param name="wars">Wave archives.</param>
+            <param name="commands">Sequence commands.</param>
+            <param name="startIndex">Start index.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceRecorder.exportButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Record the sequence.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SequenceRecorder.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceRecorder.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceRecorder.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveMapper.WarMap">
+            <summary>
+            Wave archives.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveMapper.wavs">
+            <summary>
+            Waves.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveMapper.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveMapper.#ctor(System.Collections.Generic.List{GotaSoundIO.Sound.RiffWave},System.Collections.Generic.List{NitroFileLoader.WaveArchiveInfo},System.Boolean)">
+            <summary>
+            Bank importer.
+            </summary>
+            <param name="waves">Waves.</param>
+            <param name="wars">Wave archives.</param>
+        </member>
+        <member name="M:NitroStudio2.WaveMapper.finishedButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Finished.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveMapper.PlayRegionButtonClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Play region button.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveMapper.OnClosing(System.Object,System.EventArgs)">
+            <summary>
+            On closing.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveMapper.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveMapper.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.WaveMapper.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.CreateStreamTool.SwavMode">
+            <summary>
+            Swav mode.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.CreateStreamTool.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.CreateStreamTool.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.CreateStreamTool.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.EditorBase">
+            <summary>
+            An editor base for files.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.File">
+            <summary>
+            File type to use.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.ExtFile">
+            <summary>
+            External file.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.FileName">
+            <summary>
+            File name.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.FilePath">
+            <summary>
+            File path.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.ExtensionDescription">
+            <summary>
+            Description of the extension.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.Extension">
+            <summary>
+            Extension of format.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.EditorName">
+            <summary>
+            Editor name.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.FileOpen">
+            <summary>
+            Current file open.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.FileType">
+            <summary>
+            File type.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.OtherEditor">
+            <summary>
+            Other editor.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.WritingInfo">
+            <summary>
+            Writing info.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.NoteDown">
+            <summary>
+            The current note that is down.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.EditorBase.MainWindow">
+            <summary>
+            Main window.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.#ctor(System.Type,System.String,System.String,System.String,NitroStudio2.MainWindow)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileType">Type of file.</param>
+            <param name="extensionDescription">Description of the extension.</param>
+            <param name="extension">File extension type.</param>
+            <param name="editorName">Editor name.</param>
+            <param name="mainWindow">Main window.</param>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.#ctor(System.Type,System.String,System.String,System.String,System.String,NitroStudio2.MainWindow)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileType">Type of file.</param>
+            <param name="extensionDescription">Description of the extension.</param>
+            <param name="extension">File extension type.</param>
+            <param name="editorName">Editor name.</param>
+            <param name="fileToOpen">File to open.</param>
+            <param name="mainWindow">Main window.</param>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.#ctor(System.Type,System.String,System.String,System.String,GotaSoundIO.IO.IOFile,NitroStudio2.MainWindow,System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fileType">Type of file.</param>
+            <param name="extensionDescription">Description of the extension.</param>
+            <param name="extension">File extension type.</param>
+            <param name="editorName">Editor name.</param>
+            <param name="fileToOpen">File to open.</param>
+            <param name="mainWindow">Main window.</param>
+            <param name="fileName">Filename.</param>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.GetFileOpenerPath(System.String,System.String)">
+            <summary>
+            Get the path for opening a file.
+            </summary>
+            <param name="description">File description.</param>
+            <param name="extension">File extension.</param>
+            <returns>Path of the file to open.</returns>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.GetFileSaverPath(System.String,System.String)">
+            <summary>
+            Get the path for saving a file.
+            </summary>
+            <param name="description">File description.</param>
+            <param name="extension">File extension.</param>
+            <returns>Path of the file to save.</returns>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.form_Close(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            On closing hook.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.OnClosing">
+            <summary>
+            On closing.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.DoInfoStuff">
+            <summary>
+            Do the info stuff on node selected.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.BeginUpdateNodes">
+            <summary>
+            Begin the updating of nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.UpdateNodes">
+            <summary>
+            Update the nodes in the tree. THIS MUST CONTAIN THE BEGIN AND END UPDATE NODES!
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.EndUpdateNodes">
+            <summary>
+            Complete the updating of nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.FileTest(System.Object,System.EventArgs,System.Boolean,System.Boolean)">
+            <summary>
+            Returns true if the user wants to continue.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.FindNodeByName(System.Windows.Forms.TreeNodeCollection,System.String)">
+            <summary>
+            Find nodes by name.
+            </summary>
+            <param name="NodesCollection"></param>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
+            <summary>
+            Swap the a and b objects.
+            </summary>
+            <param name="objects">Objects list.</param>
+            <param name="a">Object a to swap.</param>
+            <param name="b">Object b to swap.</param>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.ColorRegion(System.Drawing.Color,System.Byte,System.Byte)">
+            <summary>
+            Get the color region.
+            </summary>
+            <param name="color">Color.</param>
+            <param name="start">Start note.</param>
+            <param name="end">End note.</param>
+        </member>
+        <member name="M:NitroStudio2.EditorBase.GetKey(GotaSequenceLib.Notes)">
+            <summary>
+            Get the piano key.
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NitroStudio2.MainWindow">
+            <summary>
+            Main window.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.MainWindow.NitroPath">
+            <summary>
+            Nitro path.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.MainWindow.SA">
+            <summary>
+            The sound archive.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.MainWindow.StreamTempCount">
+            <summary>
+            Stream temp count.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.MainWindow.Mixer">
+            <summary>
+            Mixer.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.MainWindow.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.MainWindow.Timer">
+            <summary>
+            Timer.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.MainWindow.PositionBarFree">
+            <summary>
+            Position bar free.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.#ctor">
+            <summary>
+            Create a new main window.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.#ctor(System.String)">
+            <summary>
+            Create a new main window.
+            </summary>
+            <param name="fileToOpen">The file to open.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.Init">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.UpdateNodes">
+            <summary>
+            Update nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.DoInfoStuff">
+            <summary>
+            Do info stuff.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.NodeMouseDoubleClick">
+            <summary>
+            Double click a node.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.GetIdFromNode(System.Windows.Forms.TreeNode)">
+            <summary>
+            Get an Id from a node.
+            </summary>
+            <param name="n">The node.</param>
+            <returns>The Id.</returns>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.WriteNamesChanged(System.Object,System.EventArgs)">
+            <summary>
+            Write names changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.GetBytesSize(GotaSoundIO.IO.IOFile)">
+            <summary>
+            Get the amount of bytes for a file.
+            </summary>
+            <param name="f">The file.</param>
+            <returns>The amount of bytes.</returns>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SwapAtIndexButtonPressed(System.Object,System.EventArgs)">
+            <summary>
+            Swap the entry at the index.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.ForceUniqueIdChanged(System.Object,System.EventArgs)">
+            <summary>
+            Force unique Id changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.WarLoadIndividualChanged(System.Object,System.EventArgs)">
+            <summary>
+            Load individual changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PopulateWaveArchiveBox(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox)">
+            <summary>
+            Populate a combo box with wave archives.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SetWaveArchiveIndex(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox,System.UInt16)">
+            <summary>
+            Set the wave archive index properly for a combo box.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+            <param name="id">The Id.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SetWaveArchiveIndex(NitroFileLoader.SoundArchive,System.Windows.Forms.NumericUpDown,System.UInt16)">
+            <summary>
+            Set the wave archive index properly for a number box.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+            <param name="id">The Id.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar0BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar1BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar2BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar3BoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar0ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar1ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar2ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.BnkWar3ComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SetNewWaveArchiveInBank(NitroFileLoader.SoundArchive,System.Int32,System.Int32)">
+            <summary>
+            Set new wave archive in bank.
+            </summary>
+            <param name="s">Sound archive.</param>
+            <param name="bankId">Bank Id.</param>
+            <param name="warId">Wave archive Id.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PopulateGroupGrid(System.Windows.Forms.DataGridView,NitroFileLoader.GroupInfo)">
+            <summary>
+            Populate the group grid.
+            </summary>
+            <param name="v">The data grid view.</param>
+            <param name="g">The group.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.GroupEntriesChanged(System.Object,System.EventArgs)">
+            <summary>
+            Group entries changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamPlayerTypeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream player type changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamPlayerLeftChannelChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream player channel changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamPlayerRightChannelChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream player channel changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PopulateStreamPlayerBox(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox)">
+            <summary>
+            Populate a combo box with stream players.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SetStreamPlayerIndex(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox,System.Byte)">
+            <summary>
+            Set the player index properly for a combo box.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+            <param name="id">The Id.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamVolumeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream volume changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamPriorityChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream priority.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamMonoToStereoChanged(System.Object,System.EventArgs)">
+            <summary>
+            Mono to stereo changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamPlayerComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream player combo box changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StreamPlayerBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Stream player box changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PlayerSequenceMaxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Player changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PlayerHeapSizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Player changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PlayerFlagsChanged(System.Object,System.EventArgs)">
+            <summary>
+            Player changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PopulateBankBox(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox)">
+            <summary>
+            Populate a combo box with banks.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SetBankIndex(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox,System.UInt32)">
+            <summary>
+            Set the bank index properly for a combo box.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+            <param name="id">The Id.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PopulatePlayerBox(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox)">
+            <summary>
+            Populate a combo box with players.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SetPlayerIndex(NitroFileLoader.SoundArchive,System.Windows.Forms.ComboBox,System.Byte)">
+            <summary>
+            Set the player index properly for a combo box.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="c">The combo box.</param>
+            <param name="id">The Id.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequenceVolumeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequenceChannelPriorityChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequencePlayerPriorityChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequenceBankComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequenceBankBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequencePlayerComboBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SequencePlayerBoxChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sequence info changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PlayClick(System.Object,System.EventArgs)">
+            <summary>
+            Play click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PositionTick(System.Object,System.EventArgs)">
+            <summary>
+            Position tick.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PositionMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse down.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PositionMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse up.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.PauseClick(System.Object,System.EventArgs)">
+            <summary>
+            Pause click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.StopClick(System.Object,System.EventArgs)">
+            <summary>
+            Stop click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.VolumeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Volume changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.LoopChanged(System.Object,System.EventArgs)">
+            <summary>
+            Loop changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.SAClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Closing.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Key press.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddAbove(System.Object,System.EventArgs)">
+            <summary>
+            Add above.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddBelow(System.Object,System.EventArgs)">
+            <summary>
+            Add below.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.Replace(System.Object,System.EventArgs)">
+            <summary>
+            Replace.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.Export(System.Object,System.EventArgs)">
+            <summary>
+            Export.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.Rename(System.Object,System.EventArgs)">
+            <summary>
+            Rename.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.Delete(System.Object,System.EventArgs)">
+            <summary>
+            Delete.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.GetNextAvailableForwardId(System.Int32,System.UInt32,System.String)">
+            <summary>
+            Get the next available Id.
+            </summary>
+            <param name="preferredId">The Id.</param>
+            <param name="maxId">Maximum Id.</param>
+            <param name="root">Root Id.</param>
+            <returns>The next available Id.</returns>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.GetNextAvailablePreviousId(System.Int32,System.UInt32,System.String)">
+            <summary>
+            Get the next available Id.
+            </summary>
+            <param name="preferredId">The Id.</param>
+            <param name="maxId">Maximum Id.</param>
+            <param name="root">Root Id.</param>
+            <returns>The next available Id.</returns>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.RootAdd">
+            <summary>
+            Root add.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.OpenSeqArcFile(System.Object,System.EventArgs)">
+            <summary>
+            Open a sequence archive file.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddSequence(System.Int32)">
+            <summary>
+            Add a sequence.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddSequenceArchive(System.Int32)">
+            <summary>
+            Add a sequence archive at an index.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddBank(System.Int32)">
+            <summary>
+            Add a bank.
+            </summary>
+            <param name="index">Where to add the bank.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddWaveArchive(System.Int32)">
+            <summary>
+            Add a wave archive.
+            </summary>
+            <param name="index">Where to add the wave archive.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddSequencePlayer(System.Int32)">
+            <summary>
+            Add a sequence player.
+            </summary>
+            <param name="index">Where to add the sequence player.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddGroup(System.Int32)">
+            <summary>
+            Add a group.
+            </summary>
+            <param name="index">Where to add the group.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddStreamPlayer(System.Int32)">
+            <summary>
+            Add a stream player.
+            </summary>
+            <param name="index">Where to add the stream player.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.AddStream(System.Int32)">
+            <summary>
+            Add a stream.
+            </summary>
+            <param name="index">Where to add the stream.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.ReplaceBankWithDLS(NitroFileLoader.BankInfo,GotaSoundBank.DLS.DownloadableSounds)">
+            <summary>
+            Replace a bank with a DLS file.
+            </summary>
+            <param name="b">Bank info.</param>
+            <param name="d">DLS file.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.ReplaceBankWithSoundFont(NitroFileLoader.BankInfo,GotaSoundBank.SF2.SoundFont)">
+            <summary>
+            Replace a bank with an SF2 file.
+            </summary>
+            <param name="b">Bank info.</param>
+            <param name="s">SF2 file.</param>
+        </member>
+        <member name="M:NitroStudio2.MainWindow.importFileToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Import a file.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.NitroStudio2Instrument">
+            <summary>
+            A Nitro Studio 2 Instrument.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.NitroStudio2Instrument.Inst">
+            <summary>
+            The actual instrument.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.NitroStudio2Instrument.Waves">
+            <summary>
+            Waves.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.NitroStudio2Instrument.#ctor">
+            <summary>
+            Blank constructor.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.NitroStudio2Instrument.#ctor(NitroFileLoader.Instrument,NitroFileLoader.SoundArchive,System.UInt16,System.UInt16,System.UInt16,System.UInt16)">
+            <summary>
+            Create a Nitro Studio 2 Instrument.
+            </summary>
+            <param name="inst">The instrument.</param>
+            <param name="s">Sound archive.</param>
+            <param name="war0">Wave archive 0.</param>
+            <param name="war1">Wave archive 1.</param>
+            <param name="war2">Wave archive 2.</param>
+            <param name="war3">Wave archive 3.</param>
+        </member>
+        <member name="M:NitroStudio2.NitroStudio2Instrument.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the instrument.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroStudio2.NitroStudio2Instrument.WriteInstrument(NitroFileLoader.Bank,System.Int32,NitroFileLoader.SoundArchive,System.UInt16,System.UInt16,System.UInt16,System.UInt16)">
+            <summary>
+            Write an instrument.
+            </summary>
+            <param name="bnk">The bank.</param>
+            <param name="instrumentId">The instrument Id.</param>
+            <param name="a">Sound archive.</param>
+            <param name="war0">Wave archive 0.</param>
+            <param name="war1">Wave archive 1.</param>
+            <param name="war2">Wave archive 2.</param>
+            <param name="war3">Wave archive 3.</param>
+        </member>
+        <member name="M:NitroStudio2.NitroStudio2Instrument.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the instrument.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroStudio2.NitroStudio2Instrument.WaveEntry">
+            <summary>
+            Wave entry.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.NitroStudio2Instrument.WaveEntry.WarId">
+            <summary>
+            Wave archive Id.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.NitroStudio2Instrument.WaveEntry.WaveId">
+            <summary>
+            Wave Id.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.NitroStudio2Instrument.WaveEntry.Wave">
+            <summary>
+            Actual wave data.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.NitroStudioInstrument">
+            <summary>
+            Nitro Studio Instrument.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.NitroStudioInstrument.Inst">
+            <summary>
+            Instrument.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.NitroStudioInstrument.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the file.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroStudio2.NitroStudioInstrument.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the file.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="F:NitroStudio2.Program.NitroPath">
+            <summary>
+            Path.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.Program.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SaveCloseDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SaveCloseDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.SaveCloseDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.SaveQuitDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SaveQuitDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.SaveQuitDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.SequenceArchiveEditor">
+            <summary>
+            Sequence editor.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.#ctor(NitroStudio2.MainWindow)">
+            <summary>
+            Create a new sequence editor.
+            </summary>
+            <param name="mainWindow">The main window.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.#ctor(System.String)">
+            <summary>
+            Create a new sequence editor.
+            </summary>
+            <param name="fileToOpen">File to open.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.#ctor(GotaSoundIO.IO.IOFile,NitroStudio2.MainWindow,System.String)">
+            <summary>
+            Create a new sequence editor.
+            </summary>
+            <param name="fileToOpen">File to open.</param>
+            <param name="mainWindow">Main window.</param>
+            <param name="fileName">The file name.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.Init">
+            <summary>
+            Init.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.CopyOtherPropertiesFromFile(NitroFileLoader.SequenceArchive,NitroFileLoader.SequenceArchive)">
+            <summary>
+            Copy other properies from a file.
+            </summary>
+            <param name="dest">Destination sequence archive.</param>
+            <param name="other">The other file.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.UpdateNodes">
+            <summary>
+            Update nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.DoInfoStuff">
+            <summary>
+            Do nothing.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.genericScintilla_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Key down event for each Scintilla. Tie each Scintilla to this event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.genericScintilla1_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Enter event tied to each Scintilla that will share a FindReplace dialog.
+            Tie each Scintilla to this event.
+            </summary>
+            <param name="sender">The Scintilla receiving focus</param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.SequenceEditor_Load(System.Object,System.EventArgs)">
+            <summary>
+            Load the editor.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.SEQ_ChangedText(System.Object,System.EventArgs)">
+            <summary>
+            Sequence changed text.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.UpdateSequence">
+            <summary>
+            Update sequence.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.SEQ_StyleNeeded(System.Object,ScintillaNET.StyleNeededEventArgs)">
+            <summary>
+            SEQ needs style.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.StyleSeq(System.Int32,System.Int32)">
+            <summary>
+            Style the SEQ.
+            </summary>
+            <param name="startPos"></param>
+            <param name="endPos"></param>
+        </member>
+        <member name="T:NitroStudio2.SequenceArchiveEditor.CommandStyleType">
+            <summary>
+            Command style.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.IntToColor(System.Int32)">
+            <summary>
+            Int to color.
+            </summary>
+            <param name="rgb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.LoadSequenceText(System.String)">
+            <summary>
+            Load sequence text.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.UpdateLineNumbers(System.Int32,System.Int32)">
+            <summary>
+            Update line numbers.
+            </summary>
+            <param name="startingAtLine">Starting at line.</param>
+            <param name="endingAtLine">Ending line.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.GetSequenceNames">
+            <summary>
+            Get sequence names.
+            </summary>
+            <returns>The sequence names.</returns>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.PopulateSequenceComboBox">
+            <summary>
+            Populate the combo box.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.PlayClick(System.Object,System.EventArgs)">
+            <summary>
+            Play click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.PauseClick(System.Object,System.EventArgs)">
+            <summary>
+            Pause click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.StopClick(System.Object,System.EventArgs)">
+            <summary>
+            Stop click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.VolumeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Volume changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.LoopChanged(System.Object,System.EventArgs)">
+            <summary>
+            Loop changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.SEClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Closing.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.PositionTick(System.Object,System.EventArgs)">
+            <summary>
+            Position tick.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.PositionMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse down.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceArchiveEditor.PositionMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse up.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.SequenceEditor">
+            <summary>
+            Sequence editor.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.#ctor(NitroStudio2.MainWindow)">
+            <summary>
+            Create a new sequence editor.
+            </summary>
+            <param name="mainWindow">The main window.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.#ctor(System.String)">
+            <summary>
+            Create a new sequence editor.
+            </summary>
+            <param name="fileToOpen">File to open.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.#ctor(GotaSoundIO.IO.IOFile,NitroStudio2.MainWindow,System.String)">
+            <summary>
+            Create a new sequence editor.
+            </summary>
+            <param name="fileToOpen">File to open.</param>
+            <param name="mainWindow">Main window.</param>
+            <param name="fileName">The file name.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.Init">
+            <summary>
+            Init.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.UpdateNodes">
+            <summary>
+            Update nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.DoInfoStuff">
+            <summary>
+            Do info stuff.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.genericScintilla_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Key down event for each Scintilla. Tie each Scintilla to this event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.genericScintilla1_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Enter event tied to each Scintilla that will share a FindReplace dialog.
+            Tie each Scintilla to this event.
+            </summary>
+            <param name="sender">The Scintilla receiving focus</param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.SequenceEditor_Load(System.Object,System.EventArgs)">
+            <summary>
+            Load the editor.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.SEQ_ChangedText(System.Object,System.EventArgs)">
+            <summary>
+            Sequence changed text.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.UpdateSequence">
+            <summary>
+            Update sequence.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.SEQ_StyleNeeded(System.Object,ScintillaNET.StyleNeededEventArgs)">
+            <summary>
+            SEQ needs style.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.StyleSeq(System.Int32,System.Int32)">
+            <summary>
+            Style the SEQ.
+            </summary>
+            <param name="startPos"></param>
+            <param name="endPos"></param>
+        </member>
+        <member name="T:NitroStudio2.SequenceEditor.CommandStyleType">
+            <summary>
+            Command style.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.IntToColor(System.Int32)">
+            <summary>
+            Int to color.
+            </summary>
+            <param name="rgb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.LoadSequenceText(System.String)">
+            <summary>
+            Load sequence text.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.UpdateLineNumbers(System.Int32,System.Int32)">
+            <summary>
+            Update line numbers.
+            </summary>
+            <param name="startingAtLine">Starting at line.</param>
+            <param name="endingAtLine">Ending line.</param>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.PlayClick(System.Object,System.EventArgs)">
+            <summary>
+            Play click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.PauseClick(System.Object,System.EventArgs)">
+            <summary>
+            Pause click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.StopClick(System.Object,System.EventArgs)">
+            <summary>
+            Stop click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.VolumeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Volume changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.LoopChanged(System.Object,System.EventArgs)">
+            <summary>
+            Loop changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.SEClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Closing.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.PositionTick(System.Object,System.EventArgs)">
+            <summary>
+            Position tick.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.PositionMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse down.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.PositionMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse up.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.ExportMidi(System.Object,System.EventArgs)">
+            <summary>
+            Export MIDI.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.SequenceEditor.ExportWav(System.Object,System.EventArgs)">
+            <summary>
+            Export WAV.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.StreamPlayer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.StreamPlayer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NitroStudio2.StreamPlayer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NitroStudio2.WaveArchiveEditor">
+            <summary>
+            Wave archive editor.
+            </summary>
+        </member>
+        <member name="P:NitroStudio2.WaveArchiveEditor.WA">
+            <summary>
+            Wave archive.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveArchiveEditor.Player">
+            <summary>
+            Stream player.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveArchiveEditor.PositionBarFree">
+            <summary>
+            Position bar free.
+            </summary>
+        </member>
+        <member name="F:NitroStudio2.WaveArchiveEditor.Timer">
+            <summary>
+            Timer.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.#ctor(NitroStudio2.MainWindow)">
+            <summary>
+            Create a new wave archive editor.
+            </summary>
+            <param name="mainWindow">The main window.</param>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.#ctor(System.String)">
+            <summary>
+            Wave archive editor.
+            </summary>
+            <param name="fileToOpen">The file to open.</param>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.#ctor(GotaSoundIO.IO.IOFile,NitroStudio2.MainWindow,System.String)">
+            <summary>
+            Wave archive editor.
+            </summary>
+            <param name="fileToOpen">File to open.</param>
+            <param name="mainWindow">Main window.</param>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.Init">
+            <summary>
+            Initialize the editor.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.DoInfoStuff">
+            <summary>
+            Do info stuff.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.UpdateNodes">
+            <summary>
+            Update nodes.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.WAClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Closing.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.PlayClick(System.Object,System.EventArgs)">
+            <summary>
+            Play click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.PauseClick(System.Object,System.EventArgs)">
+            <summary>
+            Pause click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.StopClick(System.Object,System.EventArgs)">
+            <summary>
+            Stop click.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.VolumeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Volume changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.LoopChanged(System.Object,System.EventArgs)">
+            <summary>
+            Loop changed.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.PositionTick(System.Object,System.EventArgs)">
+            <summary>
+            Position tick.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.PositionMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse down.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.PositionMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse up.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.AddWave(System.Int32)">
+            <summary>
+            Add a wave at an index.
+            </summary>
+            <param name="index">The index to add the wave at.</param>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.RootAdd">
+            <summary>
+            Add a wave to the list.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeAddAbove">
+            <summary>
+            Add above.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeAddBelow">
+            <summary>
+            Add below.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeMoveUp">
+            <summary>
+            Move up.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeMoveDown">
+            <summary>
+            Move down.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeReplace">
+            <summary>
+            Replace the wave.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeExport">
+            <summary>
+            Export the wave.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.NodeDelete">
+            <summary>
+            Delete the wave.
+            </summary>
+        </member>
+        <member name="M:NitroStudio2.WaveArchiveEditor.KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Key press.
+            </summary>
+        </member>
+        <member name="T:Multimedia.UI.PianoKeyOrientation">
+            <summary>
+            Specifies the orientation of the piano keys.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyOrientation.Vertical">
+            <summary>
+            Piano key is oriented vertically.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyOrientation.HorizontalLeft">
+            <summary>
+            Piano key is oriented horizontally with the back of the key facing
+            left.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyOrientation.HorizontalRight">
+            <summary>
+            Piano key is oriented horizontally with the back of the key facing
+            right.
+            </summary>
+        </member>
+        <member name="T:Multimedia.UI.PianoKeyShape">
+            <summary>
+            Specifies the shape of piano keys.
+            </summary>
+            <remarks>
+            There are four basic shapes for piano keys. The <b>L</b> shape 
+            represents keys C and F, and the backwards version represents keys E 
+            and B. The upside down <b>T</b> shape represents keys D, G, and A. 
+            And finally, the rectangular shape represents all flat keys.  
+            </remarks>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyShape.LShape">
+            <summary>
+            The shape of the piano key will resemble the letter L.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyShape.LShapeBackwards">
+            <summary>
+            The shape of the piano key will resemble the letter L.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyShape.TShape">
+            <summary>
+            The shape of the piano key will resemble the letter T upside down.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKeyShape.RectShape">
+            <summary>
+            The shape of the piano key will be that of a rectangle.
+            </summary>
+        </member>
+        <member name="T:Multimedia.UI.PianoKey">
+            <summary>
+            Represents a piano key.
+            </summary>
+        </member>
+        <member name="F:Multimedia.UI.PianoKey.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="E:Multimedia.UI.PianoKey.StateChanged">
+            <summary>
+            Occurs when the state of the piano key changes.
+            </summary>
+            <remarks>
+            This event is triggered when the state of the piano key changes 
+            from on to off and vice versa.
+            </remarks>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.#ctor">
+            <summary>
+            Initializes a new instance of the PianoKey class.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.TurnKeyOn">
+            <summary>
+            Turns the piano key on.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.TurnKeyOff">
+            <summary>
+            Turns the piano key off.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.IsKeyOn">
+            <summary>
+            Indicates whether or not the piano key is on.
+            </summary>
+            <returns>
+            <b>true</b> if the piano key is on; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Raises the MouseEnter event.
+            </summary>
+            <param name="e">
+            An EventArgs that contains the event data. 
+            </param>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Raises the MouseLeave event.
+            </summary>
+            <param name="e">
+            An EventArgs that contains the event data. 
+            </param>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the MouseDown event.
+            </summary>
+            <param name="e">
+            An EventArgs that contains the event data. 
+            </param>
+            <remarks>
+            This event turns the piano key on.
+            </remarks>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the MouseUp event.
+            </summary>
+            <param name="e">
+            An EventArgs that contains the event data. 
+            </param>
+            <remarks>
+            This event turns the piano key off.
+            </remarks>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the MouseMove event.
+            </summary>
+            <param name="e">
+            An EventArgs that contains the event data. 
+            </param>
+            <remarks>
+            If the mouse moves outside of the piano key and the key is on,
+            the key is turned off and the mouse is released.
+            </remarks>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the Paint event.
+            </summary>
+            <param name="pe">
+            A PaintEventArgs that contains the event data. 
+            </param>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Raises the SizeChanged event.
+            </summary>
+            <param name="e">
+            An EventArgs that contains the event data.
+            </param>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPoints">
+            <summary>
+            Initializes the points that make up the piano key's region based
+            on its shape and orientation.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsHorz">
+            <summary>
+            Initialize points for horizontal orientation.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsVert">
+            <summary>
+            Initializes points for vertical orientation.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsHorzLShape">
+            <summary>
+            Initialize points for horizontal L shaped piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsHorzLShapeBackwards">
+            <summary>
+            Initialize points for horizontal backward L shaped piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsVertLShape">
+            <summary>
+            Initialize points for vertical L shaped piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsVertLShapeBackwards">
+            <summary>
+            Initialize points for vertical backward L shaped piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsHorzTShape">
+            <summary>
+            Initialize points for horizontal T shaped piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsVertTShape">
+            <summary>
+            Initialize points for vertical T shaped piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.InitPointsRectShape">
+            <summary>
+            Initialize points for rectangular piano keys.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.FlipHorizontally">
+            <summary>
+            Flip points horizontally.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.FlipVertically">
+            <summary>
+            Flip points vertically.
+            </summary>
+        </member>
+        <member name="M:Multimedia.UI.PianoKey.CreateRegion">
+            <summary>
+            Create region for piano key based on initialized points.
+            </summary>
+        </member>
+        <member name="P:Multimedia.UI.PianoKey.Orientation">
+            <summary>
+            Gets or sets a value indicating the horizontal or vertical 
+            orientation of the piano key.
+            </summary>
+            <value>
+            One of the Orientation values.
+            </value>
+        </member>
+        <member name="P:Multimedia.UI.PianoKey.Shape">
+            <summary>
+            Gets or sets the shape of the piano key.
+            </summary>
+            <remarks>
+            Piano keys have several basic shapes: An <b>L</b> shape, both 
+            forwards and backwards, an upside down <b>T</b> shape, and a 
+            rectangle shape. The <b>L</b> shape is used for notes C and F, and
+            the backwards <b>L</b> is used for notes E and B. The upside down
+            <b>T</b> is used for notes D, G, and A, and the rectangle shape
+            is used for all of the flat keys. After setting the piano key's 
+            shape, you may need to adjust its alignment to get the exact shape
+            you are looking for.  
+            </remarks>
+        </member>
+        <member name="P:Multimedia.UI.PianoKey.KeyOnColor">
+            <summary>
+            Gets or sets the color used to draw the piano key when it is on.
+            </summary>
+            <value>
+            A Color that represents the color used to paint the piano key when
+            it is in the on state. The default is Color.Blue.
+            </value>
+        </member>
+        <member name="P:Multimedia.UI.PianoKey.KeyOffColor">
+            <summary>
+            Gets or sets the color used to paint the piano key when it is off.
+            </summary>
+            <value>
+            A Color that represents the color used to paint the piano key when
+            it is in the off state. The default is Color.White.
+            </value>
+        </member>
+    </members>
+</doc>

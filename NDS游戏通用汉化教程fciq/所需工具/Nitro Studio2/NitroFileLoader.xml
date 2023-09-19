@@ -1,0 +1,1405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NitroFileLoader</name>
+    </assembly>
+    <members>
+        <member name="T:NitroFileLoader.Bank">
+            <summary>
+            Bank.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Bank.Instruments">
+            <summary>
+            Instruments.
+            </summary>
+        </member>
+        <member name="P:NitroFileLoader.Bank.MaxOrder">
+            <summary>
+            Max order.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Bank.DuplicateInstrument(NitroFileLoader.Instrument)">
+            <summary>
+            Duplicate an instrument.
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the file.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.Bank.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the file.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.Bank.GetNotePlayBackInfo(System.Int32,GotaSequenceLib.Notes,System.Byte)">
+            <summary>
+            Get note playback info.
+            </summary>
+            <param name="program">Program number.</param>
+            <param name="note">Note to play.</param>
+            <param name="velocity">Note velocity.</param>
+            <returns>The note playback info.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.ToSoundFont(NitroFileLoader.SoundArchive,NitroFileLoader.BankInfo)">
+            <summary>
+            Convert the SBNK into a sound font.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="b">The bank info.</param>
+            <returns>This as a soundfont.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.ToDLS(NitroFileLoader.SoundArchive,NitroFileLoader.BankInfo)">
+            <summary>
+            Convert the bank to downloadable sounds.
+            </summary>
+            <param name="a">The sound archive.</param>
+            <param name="b">The bank info.</param>
+            <returns>The bank as DLS.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.GetPan(System.Byte)">
+            <summary>
+            Get the pan.
+            </summary>
+            <param name="pan">Pan.</param>
+            <returns>Pan.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.SetPan(System.Int32)">
+            <summary>
+            Set the pan value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The output pan.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.MillisecondsToTimecents(System.Double)">
+            <summary>
+            Convert milliseconds to timecents.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>Milliseconds to timecents.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.TimecentsToMilliseconds(System.Int32)">
+            <summary>
+            Convert timecents to milliseconds.
+            </summary>
+            <param name="value">Time cents.</param>
+            <returns>The value in milliseconds.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.Sustain2Fraction(System.Byte)">
+            <summary>
+            Convert sustain to a fraction.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The fraction.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.Fraction2Sustain(System.Double)">
+            <summary>
+            Convert a fraction value to a sustain value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The sustain.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Bank.GetNearestTableIndex(System.Double,System.Double[])">
+            <summary>
+            Get the table index nearest to a value.
+            </summary>
+            <param name="value">Value to compare to.</param>
+            <param name="table">Table of values.</param>
+            <returns>Nearest index.</returns>
+        </member>
+        <member name="F:NitroFileLoader.Bank.AttackTable">
+            <summary>
+            Attack table to milliseconds.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Bank.DecayReleaseTable">
+            <summary>
+            Decay release table to milliseconds.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Bank.MaxReleaseTimes">
+            <summary>
+            Maximum release times in milliseconds.
+            </summary>
+        </member>
+        <member name="T:NitroFileLoader.DirectInstrument">
+            <summary>
+            Direct instrument.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.DirectInstrument.Type">
+            <summary>
+            Get the instrument type.
+            </summary>
+            <returns>The instrument type.</returns>
+        </member>
+        <member name="M:NitroFileLoader.DirectInstrument.MaxInstruments">
+            <summary>
+            Max instruments.
+            </summary>
+            <returns>The max instruments.</returns>
+        </member>
+        <member name="M:NitroFileLoader.DirectInstrument.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the instrument.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.DirectInstrument.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the instrument.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.DrumSetInstrument">
+            <summary>
+            A drum set instrument.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.DrumSetInstrument.Min">
+            <summary>
+            Minimum instrument.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.DrumSetInstrument.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the instrument.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.DrumSetInstrument.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the intrument.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.DrumSetInstrument.Type">
+            <summary>
+            The instrument type.
+            </summary>
+            <returns>The instrument type.</returns>
+        </member>
+        <member name="M:NitroFileLoader.DrumSetInstrument.MaxInstruments">
+            <summary>
+            Max instruments.
+            </summary>
+            <returns>The max instruments.</returns>
+        </member>
+        <member name="T:NitroFileLoader.Instrument">
+            <summary>
+            Instrument.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Instrument.NoteInfo">
+            <summary>
+            Note info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Instrument.Index">
+            <summary>
+            Program number.
+            </summary>
+        </member>
+        <member name="P:NitroFileLoader.Instrument.GetOrder">
+            <summary>
+            Order.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Instrument.Order">
+            <summary>
+            Order.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Instrument.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the instrument.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.Instrument.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the instrument.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.Instrument.Type">
+            <summary>
+            Instrument type.
+            </summary>
+            <returns>The instrument type.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Instrument.MaxInstruments">
+            <summary>
+            Max instruments.
+            </summary>
+            <returns>The max instruments.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Instrument.GetNoteInfo(GotaSequenceLib.Notes)">
+            <summary>
+            Get the note parameter for a note.
+            </summary>
+            <param name="note">The note to retrieve.</param>
+            <returns>The note parameter.</returns>
+        </member>
+        <member name="T:NitroFileLoader.InstrumentType">
+            <summary>
+            Instrument type.
+            </summary>
+        </member>
+        <member name="T:NitroFileLoader.NoteInfo">
+            <summary>
+            Note info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.Key">
+            <summary>
+            Key to access the note.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.InstrumentType">
+            <summary>
+            Instrument type.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.WaveId">
+            <summary>
+            Wave Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.WarId">
+            <summary>
+            Wave archive Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.BaseNote">
+            <summary>
+            Base note.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.Attack">
+            <summary>
+            Attack.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.Decay">
+            <summary>
+            Decay.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.Sustain">
+            <summary>
+            Sustain.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.Release">
+            <summary>
+            Release.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.NoteInfo.Pan">
+            <summary>
+            Pan.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.NoteInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the note info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.NoteInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the note info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.NoteInfo.ToNotePlayBackInfo">
+            <summary>
+            Convert this to note playback info.
+            </summary>
+            <returns>This as note playback info.</returns>
+        </member>
+        <member name="M:NitroFileLoader.NoteInfo.TrueType">
+            <summary>
+            True instrument type.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NitroFileLoader.NoteInfo.Equals(System.Object)">
+            <summary>
+            If the note info equals another note info.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>If the two objects are equal.</returns>
+        </member>
+        <member name="M:NitroFileLoader.NoteInfo.Duplicate">
+            <summary>
+            Duplicate the note info.
+            </summary>
+            <returns>New note info clone.</returns>
+        </member>
+        <member name="T:NitroFileLoader.KeySplitInstrument">
+            <summary>
+            A key split instrument.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.KeySplitInstrument.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the instrument.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.KeySplitInstrument.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the intrument.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.KeySplitInstrument.Type">
+            <summary>
+            The instrument type.
+            </summary>
+            <returns>The instrument type.</returns>
+        </member>
+        <member name="M:NitroFileLoader.KeySplitInstrument.MaxInstruments">
+            <summary>
+            Max instruments.
+            </summary>
+            <returns>The max instruments.</returns>
+        </member>
+        <member name="T:NitroFileLoader.Rom">
+            <summary>
+            An NDS ROM.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Rom.GameName">
+            <summary>
+            Game name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.Rom.GameCode">
+            <summary>
+            Game code.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Rom.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the ROM.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.Rom.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the ROM.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.Sequence">
+            <summary>
+            Sequence file.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Sequence.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the file.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.Sequence.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the file.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.Sequence.ToText">
+            <summary>
+            Convert the file to text.
+            </summary>
+            <returns>The file as text.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Sequence.Platform">
+            <summary>
+            Sequence platform.
+            </summary>
+            <returns>The sequence platform.</returns>
+        </member>
+        <member name="T:NitroFileLoader.SequenceArchive">
+            <summary>
+            A sequence archive. It's still a sequence. TODO: OVERRIDE LOADING AND SAVING FROM TEXT!!!
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchive.Sequences">
+            <summary>
+            Sequences. The index of each one of these is the same as the public label.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchive.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the sequence archive.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchive.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the sequence archive.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchive.Platform">
+            <summary>
+            Get the platform.
+            </summary>
+            <returns>The platform.</returns>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchive.ToText">
+            <summary>
+            Convert the file to text.
+            </summary>
+            <returns>The file as text.</returns>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchive.FromText(System.Collections.Generic.List{System.String})">
+            <summary>
+            From text.
+            </summary>
+            <param name="text">The text to parse.</param>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchive.FromText(System.Collections.Generic.List{System.String},NitroFileLoader.SoundArchive)">
+            <summary>
+            From text.
+            </summary>
+            <param name="text">The text to parse.</param>
+            <param name="a">Sound archive.</param>
+        </member>
+        <member name="T:NitroFileLoader.SequenceArchiveSequence">
+            <summary>
+            A sequence inside of the sequence archive.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.Name">
+            <summary>
+            Sequence archive name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.Index">
+            <summary>
+            Sequence index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.Bank">
+            <summary>
+            Bank.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.Volume">
+            <summary>
+            Volume.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.ChannelPriority">
+            <summary>
+            Channel priority.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.PlayerPriority">
+            <summary>
+            Player priority.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.ReadingBankId">
+            <summary>
+            Reading bank Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.ReadingPlayerId">
+            <summary>
+            Reading player Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveSequence.LabelName">
+            <summary>
+            Label name. FOR CONVERSION ONLY, DON'T USE!
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchiveSequence.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the sequence info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchiveSequence.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the sequence info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.BankInfo">
+            <summary>
+            Bank info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.ForceIndividualFile">
+            <summary>
+            Force the file to be individualized.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.File">
+            <summary>
+            File.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.WaveArchives">
+            <summary>
+            Wave archives.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.ReadingFileId">
+            <summary>
+            Reading file Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.ReadingWave0Id">
+            <summary>
+            Reading wave 0 Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.ReadingWave1Id">
+            <summary>
+            Reading wave 1 Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.ReadingWave2Id">
+            <summary>
+            Reading wave 2 Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.BankInfo.ReadingWave3Id">
+            <summary>
+            Reading wave 3 Id.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.BankInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.BankInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.BankInfo.GetAssociatedWaves">
+            <summary>
+            Get the associated waves from the wave archives.
+            </summary>
+            <returns>The waves from the wave archives.</returns>
+        </member>
+        <member name="M:NitroFileLoader.BankInfo.WriteTextFormat(System.String,System.String)">
+            <summary>
+            Write the text format.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="T:NitroFileLoader.SDATHeader">
+            <summary>
+            SDAT header.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SDATHeader.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the header.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.SDATHeader.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the header.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.NHeader">
+            <summary>
+            NDS header.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.NHeader.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the header.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.NHeader.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the header.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.GroupEntry">
+            <summary>
+            Group entry.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.Entry">
+            <summary>
+            Entry data.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.Type">
+            <summary>
+            Type.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.ReadingId">
+            <summary>
+            Reading Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.LoadSequence">
+            <summary>
+            Load sequence.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.LoadSequenceArchive">
+            <summary>
+            Load sequence archive.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.LoadBank">
+            <summary>
+            Load bank.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupEntry.LoadWaveArchive">
+            <summary>
+            Load wave archive.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.GroupEntry.LoadFlags(System.Byte)">
+            <summary>
+            Load flags.
+            </summary>
+            <param name="flags">The flags.</param>
+        </member>
+        <member name="M:NitroFileLoader.GroupEntry.SaveFlags">
+            <summary>
+            Save flags.
+            </summary>
+            <returns>The flags as a byte.</returns>
+        </member>
+        <member name="M:NitroFileLoader.GroupEntry.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the entry.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.GroupEntry.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the entry.
+            </summary>
+            <param name="w">The writer</param>
+        </member>
+        <member name="T:NitroFileLoader.GroupEntryType">
+            <summary>
+            Entry type.
+            </summary>
+        </member>
+        <member name="T:NitroFileLoader.GroupInfo">
+            <summary>
+            Group info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.GroupInfo.Entries">
+            <summary>
+            Entries.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.GroupInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.GroupInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.PlayerInfo">
+            <summary>
+            Player info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.PlayerInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.PlayerInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.PlayerInfo.SequenceMax">
+            <summary>
+            Sequence max.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.PlayerInfo.ChannelFlags">
+            <summary>
+            Channel flags.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.PlayerInfo.HeapSize">
+            <summary>
+            Heap size.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.PlayerInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.PlayerInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.PlayerInfo.BitFlags">
+            <summary>
+            Get bit flags.
+            </summary>
+        </member>
+        <member name="T:NitroFileLoader.SequenceArchiveInfo">
+            <summary>
+            Sequence archive info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveInfo.ForceIndividualFile">
+            <summary>
+            Force the file to be individualized.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveInfo.File">
+            <summary>
+            File.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceArchiveInfo.ReadingFileId">
+            <summary>
+            Reading file Id.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchiveInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.SequenceArchiveInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.SequenceInfo">
+            <summary>
+            Sequence info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.ForceIndividualFile">
+            <summary>
+            Force the file to be individualized.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.File">
+            <summary>
+            File.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.Bank">
+            <summary>
+            Bank.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.Player">
+            <summary>
+            Player.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.Volume">
+            <summary>
+            Volume.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.ChannelPriority">
+            <summary>
+            Channel priority.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.PlayerPriority">
+            <summary>
+            Player priority.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.ReadingFileId">
+            <summary>
+            Reading file Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.ReadingBankId">
+            <summary>
+            Reading bank Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SequenceInfo.ReadingPlayerId">
+            <summary>
+            Reading player Id.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SequenceInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.SequenceInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.SoundArchive">
+            <summary>
+            Sound archive.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxSequenceId">
+            <summary>
+            Max sequence Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxSequenceArchiveId">
+            <summary>
+            Max sequence archive Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxBankId">
+            <summary>
+            Max bank Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxWaveArchiveId">
+            <summary>
+            Max wave archive Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxPlayerId">
+            <summary>
+            Max player Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxGroupId">
+            <summary>
+            Max group Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxStreamPlayerId">
+            <summary>
+            Max stream player Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.MaxStreamId">
+            <summary>
+            Max stream Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.Sequences">
+            <summary>
+            Sequences.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.SequenceArchives">
+            <summary>
+            Sequence archives.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.Banks">
+            <summary>
+            Banks.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.WaveArchives">
+            <summary>
+            Wave archives.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.Players">
+            <summary>
+            Players.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.Groups">
+            <summary>
+            Groups.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.StreamPlayers">
+            <summary>
+            Stream players.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.Streams">
+            <summary>
+            Streams.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.SoundArchive.SaveSymbols">
+            <summary>
+            Save symbol block.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SoundArchive.#ctor">
+            <summary>
+            Blank constructor.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.SoundArchive.#ctor(System.String)">
+            <summary>
+            Create a sound archive from a file.
+            </summary>
+            <param name="filePath">The file path.</param>
+        </member>
+        <member name="M:NitroFileLoader.SoundArchive.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the file.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.SoundArchive.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the file.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.SoundArchive.ExportSDKProject(System.String,System.String)">
+            <summary>
+            Export an SDK project.
+            </summary>
+            <param name="directory">The directory to export to.</param>
+            <param name="projectName">The project name.</param>
+        </member>
+        <member name="T:NitroFileLoader.StreamInfo">
+            <summary>
+            Stream info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.ForceIndividualFile">
+            <summary>
+            Force the file to be individualized.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.File">
+            <summary>
+            File.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.Player">
+            <summary>
+            Stream player.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.Volume">
+            <summary>
+            Volume.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.Priority">
+            <summary>
+            Priority.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.ReadingFileId">
+            <summary>
+            Reading file Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.ReadingPlayerId">
+            <summary>
+            Player Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamInfo.MonoToStereo">
+            <summary>
+            Mono to stereo.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.StreamInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.StreamInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.StreamPlayerInfo">
+            <summary>
+            Stream player info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamPlayerInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamPlayerInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamPlayerInfo.IsStereo">
+            <summary>
+            Is stereo.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamPlayerInfo.LeftChannel">
+            <summary>
+            Left channel.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.StreamPlayerInfo.RightChannel">
+            <summary>
+            Right channel.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.StreamPlayerInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.StreamPlayerInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="T:NitroFileLoader.WaveArchiveInfo">
+            <summary>
+            Wave archive info.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchiveInfo.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchiveInfo.Index">
+            <summary>
+            Entry index.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchiveInfo.ForceIndividualFile">
+            <summary>
+            Force the file to be individualized.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchiveInfo.File">
+            <summary>
+            File.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchiveInfo.ReadingFileId">
+            <summary>
+            Reading file Id.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchiveInfo.LoadIndividually">
+            <summary>
+            Load wave archive individually.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.WaveArchiveInfo.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the info.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.WaveArchiveInfo.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the info.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.WaveArchiveInfo.WriteTextFormat(System.String,System.String)">
+            <summary>
+            Write the text format, and dump files.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="T:NitroFileLoader.Stream">
+            <summary>
+            Stream.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Stream.SupportedEncodings">
+            <summary>
+            Supported encodings.
+            </summary>
+            <returns>The supported encodings.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Stream.Name">
+            <summary>
+            Name.
+            </summary>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Stream.Extensions">
+            <summary>
+            Extensions.
+            </summary>
+            <returns>The extensions.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Stream.Description">
+            <summary>
+            Description.
+            </summary>
+            <returns>The description.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Stream.SupportsTracks">
+            <summary>
+            If the file supports tracks.
+            </summary>
+            <returns>It doesn't.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Stream.PreferredEncoding">
+            <summary>
+            Preferred encoding.
+            </summary>
+            <returns>The preferred encoding.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Stream.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the file.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.Stream.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the file.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.Stream.BeforeConversion">
+            <summary>
+            Before conversion.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Stream.AfterConversion">
+            <summary>
+            After conversion.
+            </summary>
+        </member>
+        <member name="T:NitroFileLoader.Wave">
+            <summary>
+            A wave.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Wave.SupportedEncodings">
+            <summary>
+            Supported encodings.
+            </summary>
+            <returns>The supported encodings.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Name">
+            <summary>
+            Name.
+            </summary>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Extensions">
+            <summary>
+            Extensions.
+            </summary>
+            <returns>The extensions.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Description">
+            <summary>
+            Description.
+            </summary>
+            <returns>The description.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.SupportsTracks">
+            <summary>
+            If the file supports tracks.
+            </summary>
+            <returns>It doesn't.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.PreferredEncoding">
+            <summary>
+            Preferred encoding.
+            </summary>
+            <returns>The preferred encoding.</returns>
+        </member>
+        <member name="F:NitroFileLoader.Wave.BackupNTime">
+            <summary>
+            Backup nTime to minimize inconsistencies.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the file.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.Wave.ReadShortened(GotaSoundIO.IO.FileReader,System.UInt32)">
+            <summary>
+            Read a shortened wave.
+            </summary>
+            <param name="r">The reader.</param>
+            <param name="length">The data length.</param>
+            <returns>A wave.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.WriteShortened(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write a shortened wave.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the file.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.Wave.BeforeConversion">
+            <summary>
+            Mixing to mono is required.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Wave.AfterConversion">
+            <summary>
+            On conversion.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Offset2Samples(System.UInt32,NitroFileLoader.PcmFormat)">
+            <summary>
+            Convert an offset to a sample.
+            </summary>
+            <param name="offset">The offset.</param>
+            <param name="format">The format.</param>
+            <returns>The sample number.</returns>
+        </member>
+        <member name="M:NitroFileLoader.Wave.Sample2Offset(System.UInt32,NitroFileLoader.PcmFormat)">
+            <summary>
+            Convert a sample to an offset.
+            </summary>
+            <param name="sample">The offset.</param>
+            <param name="format">The format.</param>
+            <returns>The offset number.</returns>
+        </member>
+        <member name="T:NitroFileLoader.PcmFormat">
+            <summary>
+            Pcm format.
+            </summary>
+        </member>
+        <member name="T:NitroFileLoader.WaveArchive">
+            <summary>
+            Wave archive.
+            </summary>
+        </member>
+        <member name="F:NitroFileLoader.WaveArchive.Waves">
+            <summary>
+            Waves.
+            </summary>
+        </member>
+        <member name="M:NitroFileLoader.WaveArchive.Read(GotaSoundIO.IO.FileReader)">
+            <summary>
+            Read the wave archive.
+            </summary>
+            <param name="r">The reader.</param>
+        </member>
+        <member name="M:NitroFileLoader.WaveArchive.Write(GotaSoundIO.IO.FileWriter)">
+            <summary>
+            Write the wave archive.
+            </summary>
+            <param name="w">The writer.</param>
+        </member>
+        <member name="M:NitroFileLoader.WaveArchive.GetWaves">
+            <summary>
+            Get the waves.
+            </summary>
+            <returns>The wave files.</returns>
+        </member>
+    </members>
+</doc>
